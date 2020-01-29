@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Avery_MIS4200.Models.customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.customerFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerSince)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.customerFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerSince)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.customerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.customerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.customerID })
+        </td>
+    </tr>
+}
+
+</table>
