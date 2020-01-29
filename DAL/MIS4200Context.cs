@@ -18,6 +18,6 @@ namespace Avery_MIS4200.DAL
 
         public DbSet<Orders> Orders { get; set; }
 
-        //public DbSet<Product> Products { get; set; }
+        
     }
 }
