@@ -13,5 +13,7 @@ namespace Avery_MIS4200.Models
         public string email { get; set; }
         public string phone { get; set; }
         public DateTime CustomerSince { get; set; }
+
+       
     }
 }
