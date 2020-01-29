@@ -18,5 +18,6 @@ namespace Avery_MIS4200.Models
         public int CustomerID { get; set; }
 
         public virtual customer customer { get; set; }
+
     }
 }
