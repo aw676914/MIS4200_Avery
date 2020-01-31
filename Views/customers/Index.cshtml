@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Avery_MIS4200.Models.customer>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Customer Index";
 }
 
 <h2>Index</h2>
@@ -23,9 +23,7 @@
         <th>
             @Html.DisplayNameFor(model => model.phone)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CustomerSince)
-        </th>
+        
         <th></th>
     </tr>
 
@@ -43,13 +41,11 @@
         <td>
             @Html.DisplayFor(modelItem => item.phone)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CustomerSince)
-        </td>
+       
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.customerID }) |
             @Html.ActionLink("Details", "Details", new { id=item.customerID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.customerID })
+            @*Html.ActionLink("Delete", "Delete", new { id=item.customerID })*@ 
         </td>
     </tr>
 }

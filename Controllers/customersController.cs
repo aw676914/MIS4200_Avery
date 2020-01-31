@@ -22,7 +22,7 @@ namespace Avery_MIS4200.Controllers
         }
 
         // GET: customers/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
