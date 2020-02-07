@@ -13,7 +13,7 @@ namespace Avery_MIS4200.Controllers
 {
     public class MoviesController : Controller
     {
-        private MIS4200Context db = new MIS4200Context();
+        private readonly MIS4200Context db = new MIS4200Context();
 
         // GET: Movies
         public ActionResult Index()

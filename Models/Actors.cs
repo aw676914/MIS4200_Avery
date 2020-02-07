@@ -10,6 +10,8 @@ namespace Avery_MIS4200.Models
         public int ActorsID { get; set; }
         public decimal ActorsPay { get; set; }
         // the next two properties link the orderDetail to the Order
+        public string ActorsFirstname { get; set; }
+        public string ActorsLastname { get; set; }
         public int MovieID { get; set; }
         public int TvShowsID { get; set; }
         public virtual TvShows TvShows { get; set; }
