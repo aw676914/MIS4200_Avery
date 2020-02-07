@@ -39,6 +39,7 @@ namespace Avery_MIS4200.Controllers
         // GET: Movies/Create
         public ActionResult Create()
         {
+            ViewBag.ID = new SelectList(db.Movies, "ID", "fullName");
             return View();
         }
 

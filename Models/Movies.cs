@@ -15,7 +15,9 @@ namespace Avery_MIS4200.Models
         public string DirectorLastName { get; set; }
         public DateTime MovieMade { get; set; }
 
-       
+        public string FullName { get { return DirectorLastName + ", " + DirectorFirstName; } }
+
+
         public ICollection<TvShows> TvShows { get; set; }
     }
 }

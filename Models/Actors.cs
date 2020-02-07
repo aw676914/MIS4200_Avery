@@ -20,5 +20,7 @@ namespace Avery_MIS4200.Models
         public int StudioID { get; set; }
         public virtual Studio Studio { get; set; }
 
+        public string FullName { get { return ActorsLastname + ", " + ActorsFirstname; } }
+
     }
 }

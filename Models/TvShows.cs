@@ -18,5 +18,7 @@ namespace Avery_MIS4200.Models
 
         public int MovieID { get; set; }
         public virtual Movies Movies { get; set; }
+
+        public string FullName { get { return DirectorLastName + ", " + DirectorFirstName; } }
     }
 }
