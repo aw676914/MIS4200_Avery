@@ -19,7 +19,6 @@ namespace Avery_MIS4200.DAL
         public DbSet<Product> Products { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
 
-
-
+        public System.Data.Entity.DbSet<Avery_MIS4200.Models.Movies> Movies { get; set; }
     }
 }

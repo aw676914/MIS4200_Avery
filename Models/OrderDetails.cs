@@ -15,7 +15,7 @@ namespace Avery_MIS4200.Models
         public virtual Order Order { get; set; }
         // the next two properties link the orderDetail to the Product
         public int productID { get; set; }
-        public virtual Product { get; set; }
+        
     }
 }
 
