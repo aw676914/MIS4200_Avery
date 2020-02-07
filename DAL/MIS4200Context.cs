@@ -20,5 +20,11 @@ namespace Avery_MIS4200.DAL
         public DbSet<OrderDetail> OrderDetails { get; set; }
 
         public System.Data.Entity.DbSet<Avery_MIS4200.Models.Movies> Movies { get; set; }
+
+        public System.Data.Entity.DbSet<Avery_MIS4200.Models.Actors> Actors { get; set; }
+
+        public System.Data.Entity.DbSet<Avery_MIS4200.Models.Studio> Studios { get; set; }
+
+        public System.Data.Entity.DbSet<Avery_MIS4200.Models.TvShows> TvShows { get; set; }
     }
 }

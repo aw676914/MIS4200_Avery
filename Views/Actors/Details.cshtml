@@ -1,0 +1,50 @@
+﻿@model Avery_MIS4200.Models.Actors
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Actors</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Studio.StudioName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Studio.StudioName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TvShows.Genre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TvShows.Genre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActorsPay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActorsPay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovieID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ActorsID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

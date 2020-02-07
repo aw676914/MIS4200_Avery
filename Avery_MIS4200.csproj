@@ -168,10 +168,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ActorsController.cs" />
     <Compile Include="Controllers\customersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
+    <Compile Include="Controllers\StudiosController.cs" />
+    <Compile Include="Controllers\TvShowsController.cs" />
     <Compile Include="DAL\MIS4200Context.cs" />
     <Compile Include="DAL\MovieContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -265,6 +268,21 @@
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Movies\Edit.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Actors\Create.cshtml" />
+    <Content Include="Views\Actors\Delete.cshtml" />
+    <Content Include="Views\Actors\Details.cshtml" />
+    <Content Include="Views\Actors\Edit.cshtml" />
+    <Content Include="Views\Actors\Index.cshtml" />
+    <Content Include="Views\TvShows\Create.cshtml" />
+    <Content Include="Views\TvShows\Delete.cshtml" />
+    <Content Include="Views\TvShows\Details.cshtml" />
+    <Content Include="Views\TvShows\Edit.cshtml" />
+    <Content Include="Views\TvShows\Index.cshtml" />
+    <Content Include="Views\Studios\Create.cshtml" />
+    <Content Include="Views\Studios\Delete.cshtml" />
+    <Content Include="Views\Studios\Details.cshtml" />
+    <Content Include="Views\Studios\Edit.cshtml" />
+    <Content Include="Views\Studios\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

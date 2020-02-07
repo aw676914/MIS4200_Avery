@@ -8,9 +8,9 @@ using System.Web;
 namespace Avery_MIS4200.DAL
 {
 
-    public class NovieContext : DbContext
+    public class MovieContext : DbContext
     {
-        public NovieContext() : base("name=DefaultConnection")
+        public MovieContext() : base("name=DefaultConnection")
         {
 
         }
