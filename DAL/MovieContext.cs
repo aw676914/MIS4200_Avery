@@ -12,7 +12,12 @@ namespace Avery_MIS4200.DAL
     {
         public MovieContext() : base("name=DefaultConnection")
         {
+          
+        }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<Movies> Movie { get; set; }
