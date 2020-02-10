@@ -1,4 +1,4 @@
-namespace Avery_MIS4200.Migrations.MisContext
+namespace Avery_MIS4200.Migrations.MTVContext
 {
     using System;
     using System.Data.Entity;
@@ -10,9 +10,7 @@ namespace Avery_MIS4200.Migrations.MisContext
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            MigrationsDirectory = @"Migrations\MisContext";
-            ContextKey = "Avery_MIS4200.DAL.MovieContext";
-
+            MigrationsDirectory = @"Migrations\MTVContext";
         }
 
         protected override void Seed(Avery_MIS4200.DAL.MovieContext context)
