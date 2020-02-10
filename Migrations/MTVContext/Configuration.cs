@@ -12,6 +12,7 @@ namespace Avery_MIS4200.Migrations.MTVContext
             AutomaticMigrationsEnabled = true;
             MigrationsDirectory = @"Migrations\MTVContext";
             ContextKey = "Avery_MIS4200.DAL.MovieContext";
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(Avery_MIS4200.DAL.MovieContext context)

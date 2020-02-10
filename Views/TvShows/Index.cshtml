@@ -18,7 +18,7 @@
             @Html.DisplayNameFor(model => model.Genre)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MovieName)
+            @Html.DisplayNameFor(model => model.TVName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.DirectorFirstName)
@@ -27,7 +27,7 @@
             @Html.DisplayNameFor(model => model.DirectorLastName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MovieMade)
+            @Html.DisplayNameFor(model => model.Produced)
         </th>
         <th></th>
     </tr>
@@ -41,7 +41,7 @@
             @Html.DisplayFor(modelItem => item.Genre)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.MovieName)
+            @Html.DisplayFor(modelItem => item.Produced)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.DirectorFirstName)
@@ -50,7 +50,7 @@
             @Html.DisplayFor(modelItem => item.DirectorLastName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.MovieMade)
+            @Html.DisplayFor(modelItem => item.Produced)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.TvShowsID }) |

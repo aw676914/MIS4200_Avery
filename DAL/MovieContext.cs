@@ -12,7 +12,8 @@ namespace Avery_MIS4200.DAL
     {
         public MovieContext() : base("name=DefaultConnection")
         {
-          
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<MovieContext,
+            Avery_MIS4200.Migrations.MTVContext.Configuration>("DefaultConnection"));
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
