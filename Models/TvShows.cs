@@ -12,7 +12,7 @@ namespace Avery_MIS4200.Models
         public string TVName { get; set; }
         public string DirectorFirstName { get; set; }
         public string DirectorLastName { get; set; }
-        public DateTime Produced { get; set; }
+        public string Produced { get; set; }
 
         public ICollection<Studio> Studio { get; set; }
 

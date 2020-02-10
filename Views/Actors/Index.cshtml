@@ -26,9 +26,7 @@
         <th>
             @Html.DisplayNameFor(model => model.ActorsLastname)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MovieID)
-        </th>
+        
         <th></th>
     </tr>
 
@@ -49,9 +47,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.ActorsLastname)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MovieID)
-        </td>
+        
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ActorsID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ActorsID }) |

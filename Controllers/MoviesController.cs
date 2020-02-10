@@ -47,7 +47,7 @@ namespace Avery_MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MovieID,Genre,MovieName,DirectorFirstName,DirectorLastName,MovieMade")] Movies movies)
+        public ActionResult Create([Bind(Include = "MovieID,Genre,MovieName,DirectorFirstName,DirectorLastName,Produced")] Movies movies)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace Avery_MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MovieID,Genre,MovieName,DirectorFirstName,DirectorLastName,MovieMade")] Movies movies)
+        public ActionResult Edit([Bind(Include = "MovieID,Genre,MovieName,DirectorFirstName,DirectorLastName,Produced")] Movies movies)
         {
             if (ModelState.IsValid)
             {
