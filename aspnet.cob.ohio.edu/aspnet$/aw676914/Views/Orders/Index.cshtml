@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Avery_MIS4200.Models.Orders>
+
+@{
+    ViewBag.Title = "Order Index";
+}
+
+<h2>Order Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.customer.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.orderdate)
+        </th>
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.customer.FullName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.description)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.orderdate)
+    </td>
+    
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.orderNum }) |
+        @Html.ActionLink("Details", "Details", new { id = item.orderNum }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.orderNum })
+    </td>
+</tr>
+}
+
+</table>

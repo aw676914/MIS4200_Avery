@@ -1,0 +1,58 @@
+﻿@model Avery_MIS4200.Models.customer
+
+@{
+    ViewBag.Title = "Customer Details";
+}
+
+<h2>Customer Details</h2>
+
+<div>
+    <h4>customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customerFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customerFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerSince)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerSince)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.customerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

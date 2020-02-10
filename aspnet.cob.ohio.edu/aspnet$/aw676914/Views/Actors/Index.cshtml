@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Avery_MIS4200.Models.Actors>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Studio.StudioName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TvShows.Genre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActorsPay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MovieID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Studio.StudioName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TvShows.Genre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActorsPay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MovieID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ActorsID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ActorsID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ActorsID })
+        </td>
+    </tr>
+}
+
+</table>
