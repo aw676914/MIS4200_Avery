@@ -13,7 +13,7 @@ namespace Avery_MIS4200.Controllers
 {
     public class ActorsController : Controller
     {
-        private MIS4200Context db = new MIS4200Context();
+        private MovieContext db = new MovieContext();
 
         // GET: Actors
         public ActionResult Index()
@@ -40,9 +40,8 @@ namespace Avery_MIS4200.Controllers
         // GET: Actors/Create
         public ActionResult Create()
         {
-            ViewBag.StudioID = new SelectList(db.Studios, "StudioID", "StudioName");
+            ViewBag.StudioID = new SelectList(db.Studio, "StudioID", "StudioName");
             ViewBag.TvShowsID = new SelectList(db.TvShows, "TvShowsID", "Genre");
-            ViewBag.ID = new SelectList(db.Actors, "ID", "fullName");
             return View();
         }
 
@@ -51,7 +50,7 @@ namespace Avery_MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ActorsID,ActorsPay,MovieID,TvShowsID,StudioID")] Actors actors)
+        public ActionResult Create([Bind(Include = "ActorsID,ActorsPay,ActorsFirstname,ActorsLastname,MovieID,TvShowsID,StudioID")] Actors actors)
         {
             if (ModelState.IsValid)
             {
@@ -60,7 +59,7 @@ namespace Avery_MIS4200.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.StudioID = new SelectList(db.Studios, "StudioID", "StudioName", actors.StudioID);
+            ViewBag.StudioID = new SelectList(db.Studio, "StudioID", "StudioName", actors.StudioID);
             ViewBag.TvShowsID = new SelectList(db.TvShows, "TvShowsID", "Genre", actors.TvShowsID);
             return View(actors);
         }
@@ -77,7 +76,7 @@ namespace Avery_MIS4200.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.StudioID = new SelectList(db.Studios, "StudioID", "StudioName", actors.StudioID);
+            ViewBag.StudioID = new SelectList(db.Studio, "StudioID", "StudioName", actors.StudioID);
             ViewBag.TvShowsID = new SelectList(db.TvShows, "TvShowsID", "Genre", actors.TvShowsID);
             return View(actors);
         }
@@ -87,7 +86,7 @@ namespace Avery_MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ActorsID,ActorsPay,MovieID,TvShowsID,StudioID")] Actors actors)
+        public ActionResult Edit([Bind(Include = "ActorsID,ActorsPay,ActorsFirstname,ActorsLastname,MovieID,TvShowsID,StudioID")] Actors actors)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +94,7 @@ namespace Avery_MIS4200.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.StudioID = new SelectList(db.Studios, "StudioID", "StudioName", actors.StudioID);
+            ViewBag.StudioID = new SelectList(db.Studio, "StudioID", "StudioName", actors.StudioID);
             ViewBag.TvShowsID = new SelectList(db.TvShows, "TvShowsID", "Genre", actors.TvShowsID);
             return View(actors);
         }

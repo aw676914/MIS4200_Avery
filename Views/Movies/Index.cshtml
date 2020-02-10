@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Avery_MIS4200.Models.Movies>
 
 @{
-    ViewBag.Title = "Movie Index";
+    ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
@@ -30,28 +30,28 @@
     </tr>
 
 @foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.Genre)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.MovieName)
-    </td>
-    <th>
-        @Html.DisplayNameFor(model => model.DirectorFirstName)
-    </th>
-    <th>
-        @Html.DisplayNameFor(model => model.DirectorLastName)
-    </th>
-    <td>
-        @Html.DisplayFor(modelItem => item.MovieMade)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.MovieID }) |
-        @Html.ActionLink("Details", "Details", new { id = item.MovieID }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.MovieID })
-    </td>
-</tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Genre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MovieName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DirectorFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DirectorLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MovieMade)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MovieID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MovieID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MovieID })
+        </td>
+    </tr>
 }
 
 </table>

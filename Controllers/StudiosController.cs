@@ -13,12 +13,12 @@ namespace Avery_MIS4200.Controllers
 {
     public class StudiosController : Controller
     {
-        private MIS4200Context db = new MIS4200Context();
+        private MovieContext db = new MovieContext();
 
         // GET: Studios
         public ActionResult Index()
         {
-            return View(db.Studios.ToList());
+            return View(db.Studio.ToList());
         }
 
         // GET: Studios/Details/5
@@ -28,7 +28,7 @@ namespace Avery_MIS4200.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Studio studio = db.Studios.Find(id);
+            Studio studio = db.Studio.Find(id);
             if (studio == null)
             {
                 return HttpNotFound();
@@ -51,7 +51,7 @@ namespace Avery_MIS4200.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Studios.Add(studio);
+                db.Studio.Add(studio);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace Avery_MIS4200.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Studio studio = db.Studios.Find(id);
+            Studio studio = db.Studio.Find(id);
             if (studio == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace Avery_MIS4200.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Studio studio = db.Studios.Find(id);
+            Studio studio = db.Studio.Find(id);
             if (studio == null)
             {
                 return HttpNotFound();
@@ -110,8 +110,8 @@ namespace Avery_MIS4200.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Studio studio = db.Studios.Find(id);
-            db.Studios.Remove(studio);
+            Studio studio = db.Studio.Find(id);
+            db.Studio.Remove(studio);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

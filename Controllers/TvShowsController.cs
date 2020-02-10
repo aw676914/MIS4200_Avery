@@ -13,7 +13,7 @@ namespace Avery_MIS4200.Controllers
 {
     public class TvShowsController : Controller
     {
-        private MIS4200Context db = new MIS4200Context();
+        private MovieContext db = new MovieContext();
 
         // GET: TvShows
         public ActionResult Index()
@@ -41,7 +41,6 @@ namespace Avery_MIS4200.Controllers
         public ActionResult Create()
         {
             ViewBag.MovieID = new SelectList(db.Movies, "MovieID", "Genre");
-            ViewBag.ID = new SelectList(db.TvShows, "ID", "fullName");
             return View();
         }
 
@@ -50,7 +49,7 @@ namespace Avery_MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "TvShowsID,Genre,MovieName,Director,MovieMade,MovieID")] TvShows tvShows)
+        public ActionResult Create([Bind(Include = "TvShowsID,Genre,MovieName,DirectorFirstName,DirectorLastName,MovieMade,MovieID")] TvShows tvShows)
         {
             if (ModelState.IsValid)
             {
@@ -84,7 +83,7 @@ namespace Avery_MIS4200.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "TvShowsID,Genre,MovieName,Director,MovieMade,MovieID")] TvShows tvShows)
+        public ActionResult Edit([Bind(Include = "TvShowsID,Genre,MovieName,DirectorFirstName,DirectorLastName,MovieMade,MovieID")] TvShows tvShows)
         {
             if (ModelState.IsValid)
             {
