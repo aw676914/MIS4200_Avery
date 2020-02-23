@@ -26,6 +26,7 @@ namespace Avery_MIS4200.DAL
         public DbSet<Studio> Studio { get; set; }
         public DbSet<Actors> Actors { get; set; }
 
-       
+        public DbSet<Regeistar> Regeistars { get; set; }
+
     }
 }

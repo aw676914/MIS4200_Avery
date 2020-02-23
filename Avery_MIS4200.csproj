@@ -173,6 +173,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
+    <Compile Include="Controllers\RegeistarsController.cs" />
     <Compile Include="Controllers\StudiosController.cs" />
     <Compile Include="Controllers\TvShowsController.cs" />
     <Compile Include="DAL\MIS4200Context.cs" />
@@ -192,6 +193,7 @@
     <Compile Include="Models\OrderDetails.cs" />
     <Compile Include="Models\Orders.cs" />
     <Compile Include="Models\Products.cs" />
+    <Compile Include="Models\Regeistar.cs" />
     <Compile Include="Models\Studio.cs" />
     <Compile Include="Models\TvShows.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -285,6 +287,11 @@
     <Content Include="Views\Studios\Details.cshtml" />
     <Content Include="Views\Studios\Edit.cshtml" />
     <Content Include="Views\Studios\Index.cshtml" />
+    <Content Include="Views\Regeistars\Create.cshtml" />
+    <Content Include="Views\Regeistars\Delete.cshtml" />
+    <Content Include="Views\Regeistars\Details.cshtml" />
+    <Content Include="Views\Regeistars\Edit.cshtml" />
+    <Content Include="Views\Regeistars\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
