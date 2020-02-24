@@ -19,6 +19,18 @@
                 </button>
                 @Html.ActionLink("Avery MIS4200", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    Entertainment Industry
+                </button>
+                <div class="dropdown-menu">
+                    <a>@Html.ActionLink("Movies", "Index", "Movies") </a>
+                    <a> @Html.ActionLink("TvShows", "Index", "TvShows") </a>
+                    <a> @Html.ActionLink("Studios", "Index", "Studios") </a>
+                    <a> @Html.ActionLink("Actors", "Index", "Actors") </a>
+                </div>
+            </div>
+        </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>

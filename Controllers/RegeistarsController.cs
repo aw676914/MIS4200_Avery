@@ -19,7 +19,16 @@ namespace Avery_MIS4200.Controllers
         // GET: Regeistars
         public ActionResult Index()
         {
-            return View(db.Regeistars.ToList());
+            if (User.Identity.IsAuthenticated)
+            {
+                return View(db.Regeistars.ToList());
+            }
+            else
+            {
+                return View("NotAuthenticated");
+            }
+
+            
         }
 
         // GET: Regeistars/Details/5
@@ -52,15 +61,28 @@ namespace Avery_MIS4200.Controllers
         {
             if (ModelState.IsValid)
             {
-
-
-
                 Guid memberID;
                 Guid.TryParse(User.Identity.GetUserId(), out memberID);
                 regeistar.ID = memberID;
                 db.Regeistars.Add(regeistar);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                //db.SaveChanges will throw an Exception if the user already exists
+                try
+                {
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (Exception)
+                {
+                    return View("DuplicateUser");
+                }
+
+
+                //Guid memberID;
+                //Guid.TryParse(User.Identity.GetUserId(), out memberID);
+                //regeistar.ID = memberID;
+                //db.Regeistars.Add(regeistar);
+                //db.SaveChanges();
+                //return RedirectToAction("Index");
             }
 
             return View(regeistar);

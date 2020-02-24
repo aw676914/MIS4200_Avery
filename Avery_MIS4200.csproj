@@ -292,6 +292,7 @@
     <Content Include="Views\Regeistars\Details.cshtml" />
     <Content Include="Views\Regeistars\Edit.cshtml" />
     <Content Include="Views\Regeistars\Index.cshtml" />
+    <Content Include="Views\Regeistars\DuplicateUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
